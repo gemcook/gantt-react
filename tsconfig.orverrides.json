@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "node_modules",
+    "paths": {
+      "@api": ["../src/api/index.ts"],
+      "@assets/*": ["../src/assets/*"],
+      "@components/*": ["../src/components/*"],
+      "@config": ["../src/config/index.ts"],
+      "@constants": ["../src/constants/index.ts"],
+      "@data": ["../src/data/index.ts"],
+      "@utils": ["../src/lib/utils/index.ts"],
+      "@validations": ["../src/lib/validations/index.ts"],
+      "@pages": ["../src/pages/index.ts"],
+      "@templates": ["../src/templates/index.ts"],
+      "@actions": ["../src/redux/actions/index.ts"]
+    }
+  }
+}
