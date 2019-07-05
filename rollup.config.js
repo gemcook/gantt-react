@@ -59,6 +59,10 @@ export default [
     output: {
       file: 'lib/index.js',
       format: 'umd',
+      globals: {
+        react: 'React',
+        'react-dom': 'ReactDOM',
+      },
       name: 'GanttReact',
     },
   },
