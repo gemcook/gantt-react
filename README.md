@@ -9,6 +9,7 @@
 
 `yarn add`
 
+
 ### Import
 
 
@@ -16,41 +17,40 @@
 
 
 ```js
-
 const tasks = [
-    [
-      {
-        id: '1-1',
-        name: 'テスト',
-        start: '2019-7-18',
-        end: '2019-7-19',
-      },
-      {
-        id: '1-2',
-        name: '2行目',
-        start: '2019-7-21',
-        end: '2019-7-22',
-      },
-    ],
-    [
-      {
-        id: '2-1',
-        name: 'a',
-        start: '2019-7-18',
-        end: '2019-7-20',
-        customClass: 'aa',
-      },
-    ],
-]
+  [
+    {
+      id: '1-1',
+      name: 'テスト',
+      start: '2019-7-18',
+      end: '2019-7-19',
+    },
+    {
+      id: '1-2',
+      name: '2行目',
+      start: '2019-7-21',
+      end: '2019-7-22',
+    },
+  ],
+  [
+    {
+      id: '2-1',
+      name: 'a',
+      start: '2019-7-18',
+      end: '2019-7-20',
+      customClass: 'aa',
+    },
+  ],
+];
 
 const options = {
-    headerHeight: 50,
-    barHeight: 30,
-    viewMode: 'Day',
-    language: 'ja',
-  };
+  headerHeight: 50,
+  barHeight: 30,
+  viewMode: 'Day',
+  language: 'ja',
+};
 
-<Gantt tasks={tasks} options={options} />
+<Gantt tasks={tasks} options={options} />;
 ```
 
 
@@ -71,4 +71,6 @@ const options = {
 
 ## License
 
+
+[MIT](https://github.com/gemcook/gantt-react/blob/master/LICENSE)
 
