@@ -6,7 +6,7 @@ const postcss = require('rollup-plugin-postcss');
 export default [
   {
     external: ['react', 'react-dom'],
-    input: 'src/index.tsx',
+    input: 'src/components/index.ts',
     plugins: [
       babel({
         runtimeHelpers: true,
@@ -32,8 +32,6 @@ export default [
             '@babel/plugin-transform-runtime',
             {
               corejs: 3,
-              regenerator: false,
-              useESModules: false,
             },
           ],
           ['@babel/proposal-class-properties', {loose: true}],

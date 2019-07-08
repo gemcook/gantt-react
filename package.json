@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "author": "Gemcook Engineers <engineers@gemcook.com>",
   "license": "MIT",
+  "main": "lib/index.js",
   "files": [
     "lib",
     "README.md",
@@ -36,7 +37,7 @@
     "@babel/preset-env": "^7.5.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
-    "@babel/runtime-corejs3": "^7.5.0",
+    "@babel/runtime-corejs3": "^7.5.1",
     "@types/node-sass": "^4.11.0",
     "@types/prettier": "^1.11.0",
     "@types/stylelint": "^9.10.0",
