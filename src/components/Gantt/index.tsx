@@ -4,7 +4,7 @@ import {collection} from '@gemcook/utils';
 
 import {GanttProps} from './types';
 
-import './index.scss';
+import '../../styles/index.scss';
 
 const ReactGantt: React.FC<GanttProps> = props => {
   const ganttRef = useRef(null);
