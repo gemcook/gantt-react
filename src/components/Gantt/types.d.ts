@@ -23,9 +23,9 @@ export type GanttProps = {
     headerLowerTextY?: number;
     headerUpperTextY?: number;
     headerDayOfWeekTextY?: number;
-    bodyPosition?: 0;
-    startBeforeDay?: 30;
-    endLaterDay?: 30;
+    bodyPosition?: number;
+    startBeforeDay?: number;
+    endLaterDay?: number;
   };
 };
 
@@ -37,4 +37,5 @@ type Task = {
   progress?: number;
   dependencies?: string;
   customClass?: string;
+  customRowClass?: string;
 };

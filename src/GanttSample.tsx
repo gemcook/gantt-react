@@ -64,12 +64,16 @@ const GanttDemo: React.FC = () => {
     barHeight: 30,
     viewMode: 'Day',
     language: 'ja',
+    selectDay: '2019-06-03',
+    startBeforeDay: 30,
+    endLaterDay: 60,
   };
 
   return (
     <div>
       <Gantt tasks={tasks} options={options} />
       <button onClick={() => setTasks(dummyTasks)}>ガント表示ボタン</button>
+      <button onClick={() => setTasks([])}>ガントリセットボタン</button>
     </div>
   );
 };
