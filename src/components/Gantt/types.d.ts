@@ -1,5 +1,6 @@
 export type GanttProps = {
   tasks: Array<Array<Task>>;
+  selectDay?: string;
   options?: {
     onClick?: (task: Task) => any;
     onDateChange?: (task: Task, start: Date, end: Date) => any;
@@ -22,6 +23,9 @@ export type GanttProps = {
     headerLowerTextY?: number;
     headerUpperTextY?: number;
     headerDayOfWeekTextY?: number;
+    bodyPosition?: 0;
+    startBeforeDay?: 30;
+    endLaterDay?: 30;
   };
 };
 
