@@ -72,7 +72,6 @@ const GanttDemo: React.FC = () => {
     <div>
       <Gantt tasks={tasks} options={options} selectDay="2019-06-03" />
       <button onClick={() => setTasks(dummyTasks)}>ガント表示ボタン</button>
-      <button onClick={() => setTasks([])}>ガントリセットボタン</button>
     </div>
   );
 };

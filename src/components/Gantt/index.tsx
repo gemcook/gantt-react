@@ -11,11 +11,6 @@ const ReactGantt: React.FC<GanttProps> = props => {
   const [gantt, setGantt] = useState();
 
   useEffect(() => {
-    // tasksが空配列なら処理を中断する
-    if (props.tasks.length === 0) {
-      return;
-    }
-
     // キャメルケースで受け取った値をスネークケースにする。
     const options = collection.toSnakeKeys(props.options);
     const tasks = props.tasks.map(rowTasks => collection.toSnakeKeys(rowTasks));
