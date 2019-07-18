@@ -1,3 +1,4 @@
+const fs = require('fs-extra');
 const resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
 const babel = require('rollup-plugin-babel');
@@ -8,6 +9,17 @@ export default [
     external: ['react', 'react-dom'],
     input: 'src/components/index.ts',
     plugins: [
+      {
+        name: 'clear dir',
+        buildStart: () => {
+          fs.emptyDirSync('./lib');
+        },
+        buildEnd: err => {
+          if (err) {
+            throw err;
+          }
+        },
+      },
       babel({
         runtimeHelpers: true,
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],

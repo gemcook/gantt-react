@@ -1202,10 +1202,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-9.0.1.tgz#c27b391d8457d1e893f1eddeaf5e5412d12ffbb5"
   integrity sha512-6It2EVfGskxZCQhuykrfnALg7oVeiI6KclWSmGDqB0AiInVrTGB9Jp9i4/Ad21u9Jde/voVQz6eFX/eSg/UsPA==
 
-"@gemcook/gantt@0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@gemcook/gantt/-/gantt-0.1.4.tgz#4f531d603933bfd416cc4441128f0161fb7dfd37"
-  integrity sha512-gZ8c0vWIaJZc1eKl7D2uMCN8oLpV5vdgSqXWJlG/WQbRIshU4xZwC0KA7IgoClCZm+XaZID46hGh/o9KfEpsow==
+"@gemcook/gantt@0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@gemcook/gantt/-/gantt-0.1.5.tgz#eff3ce4275521caf978a9610f4efa70c825c3b04"
+  integrity sha512-Sq7AIrxXcLv/g7L9KD7mkQvAqEtxv7tyHIpjpYlyJAv0BH+NlA/zyiGVN9Gqnz1u4uEFE+nWNMzUA1/c0eqh8g==
 
 "@gemcook/utils@^5.1.7":
   version "5.1.7"
@@ -4888,6 +4888,15 @@ fs-extra@^4.0.2:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+fs-extra@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
+  integrity sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
+  dependencies:
+    graceful-fs "^4.2.0"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
 fs-minipass@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/fs-minipass/-/fs-minipass-1.2.5.tgz#06c277218454ec288df77ada54a03b8702aacb9d"
@@ -5124,6 +5133,11 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   version "4.1.15"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
   integrity sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
+
+graceful-fs@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.0.tgz#8d8fdc73977cb04104721cb53666c1ca64cd328b"
+  integrity sha512-jpSvDPV4Cq/bgtpndIWbI5hmYxhQGHPC4d4cqBPb4DLniCfhJokdXhwhaDuLBGLQdvvRum/UiX6ECVIPvDXqdg==
 
 growly@^1.3.0:
   version "1.3.0"
