@@ -1202,19 +1202,19 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-9.0.1.tgz#c27b391d8457d1e893f1eddeaf5e5412d12ffbb5"
   integrity sha512-6It2EVfGskxZCQhuykrfnALg7oVeiI6KclWSmGDqB0AiInVrTGB9Jp9i4/Ad21u9Jde/voVQz6eFX/eSg/UsPA==
 
-"@gemcook/gantt@0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@gemcook/gantt/-/gantt-0.1.4.tgz#4f531d603933bfd416cc4441128f0161fb7dfd37"
-  integrity sha512-gZ8c0vWIaJZc1eKl7D2uMCN8oLpV5vdgSqXWJlG/WQbRIshU4xZwC0KA7IgoClCZm+XaZID46hGh/o9KfEpsow==
+"@gemcook/gantt@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@gemcook/gantt/-/gantt-0.1.6.tgz#753171cd6a5c1abd45a5bf0bf5eca06039c09316"
+  integrity sha512-/99AiAbiHSzqfdsl4G1tCgtFrL6Okh64XXOstLy7C4lzQNwPeD7aBBY+pHmsB2bBwAqK9w6KemjmR3eBVmUHaw==
 
-"@gemcook/utils@^5.1.7":
-  version "5.1.7"
-  resolved "https://registry.yarnpkg.com/@gemcook/utils/-/utils-5.1.7.tgz#e6413f5ab50e227afaf9b49d0002d6e41d3fb967"
-  integrity sha512-//0zzFHsd8/nPR0gl18u2Y0V5RR2sz3oNP5fgdfvvHGrFmwp8fusKUoO3gDyRG3i6kYWi/sdvHjFVaKobzpQPA==
+"@gemcook/utils@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@gemcook/utils/-/utils-5.2.0.tgz#e5ddfd34e036c44ea188060a47ed57c5977d1881"
+  integrity sha512-d/AdbVC2mpv8XtHHuaDpFs1E/Nr3ahYB1ojYcKmkmxwNNWkIPUF0FunojhEYcZzyuLXhdUQ5ZxM8nregV9xWMg==
   dependencies:
+    base-64 "^0.1.0"
     case "^1.6.1"
     date-fns "^2.0.0-alpha.24"
-    js-base64 "^2.4.3"
     jwt-decode "^2.2.0"
     lodash "^4.17.11"
     moment "^2.23.0"
@@ -2467,6 +2467,11 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
+
+base-64@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/base-64/-/base-64-0.1.0.tgz#780a99c84e7d600260361511c4877613bf24f6bb"
+  integrity sha1-eAqZyE59YAJgNhURxId2E78k9rs=
 
 base64-js@^1.0.2:
   version "1.3.0"
@@ -6483,7 +6488,7 @@ jest@24.7.1:
     import-local "^2.0.0"
     jest-cli "^24.7.1"
 
-js-base64@^2.1.8, js-base64@^2.4.3:
+js-base64@^2.1.8:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.5.1.tgz#1efa39ef2c5f7980bb1784ade4a8af2de3291121"
   integrity sha512-M7kLczedRMYX4L8Mdh4MzyAMM9O5osx+4FcOQuTvr3A9F2D9S5JXheN0ewNbrvK2UatkTRhL5ejGmGSjNMiZuw==

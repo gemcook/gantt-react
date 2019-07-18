@@ -26,6 +26,8 @@ export type GanttProps = {
     bodyPosition?: number;
     startBeforeDay?: number;
     endLaterDay?: number;
+    tooltipHeight?: number;
+    tooltipCornerRadius?: number;
   };
 };
 
