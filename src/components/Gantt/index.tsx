@@ -11,25 +11,23 @@ const ReactGantt: React.FC<GanttProps> = props => {
   const [gantt, setGantt] = useState();
 
   useEffect(() => {
-    // tasksが空配列なら処理を中断する
-    if (props.tasks.length === 0) {
-      return;
-    }
-
     // キャメルケースで受け取った値をスネークケースにする。
     const options = collection.toSnakeKeys(props.options);
-    const tasks = props.tasks.map(rowTasks => collection.toSnakeKeys(rowTasks));
+    const tasks = collection.toSnakeKeys(props.tasks);
 
     // もしガントが表示済みなら更新する・存在しなければ新しく作成する
     if (gantt) {
-      gantt.refresh(tasks);
+      gantt.refresh(tasks, {...options, select_day: props.selectDay});
     } else {
-      const ganttInstance = new Gantt(ganttRef.current, tasks, options);
+      const ganttInstance = new Gantt(ganttRef.current, tasks, {
+        ...options,
+        select_day: props.selectDay,
+      });
 
       // Ganttインスタンスを保持する
       setGantt(ganttInstance);
     }
-  }, [props.tasks, props.options, gantt]);
+  }, [props.tasks, props.options, gantt, props.selectDay]);
 
   return (
     <div className="gc__frappe-gantt-react">
