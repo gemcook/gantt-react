@@ -2,7 +2,7 @@ import React, {useRef, useEffect, useState} from 'react';
 import Gantt from '@gemcook/gantt';
 import {collection} from '@gemcook/utils';
 
-type GanttProps = import('./types').GanttProps;
+import {GanttProps} from './types';
 
 import '../../styles/index.scss';
 
