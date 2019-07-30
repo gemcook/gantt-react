@@ -51,7 +51,7 @@ const ReactGantt: React.FC<GanttProps> = props => {
       // NOTE ganttを再生成する関数
       gantt.refresh(tasks);
     }
-  }, [props.tasks, gantt, props.options, props.selectDay]);
+  }, [props.tasks, props.options, gantt, props.selectDay]);
 
   return (
     <div className="gc__frappe-gantt-react">
