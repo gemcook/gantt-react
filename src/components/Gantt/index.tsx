@@ -17,17 +17,36 @@ const ReactGantt: React.FC<GanttProps> = props => {
 
     // もしガントが表示済みなら更新する・存在しなければ新しく作成する
     if (gantt) {
-      gantt.refresh(tasks, {...options, select_day: props.selectDay});
+      // TODO オプションをオブジェクトで受け取らないように修正する
+      // NOTE ganttを再生成する関数
+      gantt.refresh(tasks, {
+        ...options,
+        select_day: props.selectDay,
+        on_click: props.onClick,
+        on_date_change: props.onDateChange,
+        on_progress_change: props.onProgressChange,
+        on_view_change: props.onViewChange,
+        on_contextmenu: props.onContextMenu,
+        on_gantt_contextmenu: props.onGanttContextMenu,
+      });
     } else {
+      // TODO オプションをオブジェクトで受け取らないように修正する
+      // NOTE 新しいガントを作成する
       const ganttInstance = new Gantt(ganttRef.current, tasks, {
         ...options,
         select_day: props.selectDay,
+        on_click: props.onClick,
+        on_date_change: props.onDateChange,
+        on_progress_change: props.onProgressChange,
+        on_view_change: props.onViewChange,
+        on_contextmenu: props.onContextMenu,
+        on_gantt_contextmenu: props.onGanttContextMenu,
       });
 
       // Ganttインスタンスを保持する
       setGantt(ganttInstance);
     }
-  }, [props.tasks, props.options, gantt, props.selectDay]);
+  }, [props, gantt]);
 
   return (
     <div className="gc__frappe-gantt-react">
