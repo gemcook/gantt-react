@@ -5,8 +5,12 @@ export type GanttProps = {
   onDateChange?: (task: Task, start: Date, end: Date) => void;
   onProgressChange?: (task: Task, progress: number) => void;
   onViewChange?: (viewMode: string) => void;
-  onContextMenu?: (e: Event, task: Task) => void;
-  onGanttContextMenu?: (e: Event, new_task: Task, tasks: Array<task>) => void;
+  onContextMenu?: (e: MouseEvent, task: Task) => void;
+  onGanttContextMenu?: (
+    e: MouseEvent,
+    new_task: Task,
+    tasks: Array<Task>
+  ) => void;
   options?: {
     headerHeight?: number;
     coumnWidth?: number;
