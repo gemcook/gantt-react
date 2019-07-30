@@ -21,7 +21,7 @@ const ReactGantt: React.FC<GanttProps> = props => {
       const ganttInstance = new Gantt(ganttRef.current, tasks, {
         ...options,
         select_day: props.selectDay,
-        on_click: props.onClick,
+        on_click: props.onGanttBarClick,
         on_date_change: props.onDateChange,
         on_progress_change: props.onProgressChange,
         on_view_change: props.onViewChange,

@@ -1,7 +1,7 @@
 export type GanttProps = {
   tasks: Array<Array<Task>>;
   selectDay?: string;
-  onClick?: (task: Task) => void;
+  onGanttBarClick?: (task: Task) => void;
   onDateChange?: (task: Task, start: Date, end: Date) => void;
   onProgressChange?: (task: Task, progress: number) => void;
   onViewChange?: (viewMode: string) => void;
