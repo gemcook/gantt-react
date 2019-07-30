@@ -42,11 +42,14 @@ const ReactGantt: React.FC<GanttProps> = props => {
 
     // もしガントが表示済みなら更新する
     if (gantt) {
-      // NOTE ganttを再生成する関数
-      gantt.refresh(tasks, {
+      // ガントのオプションを更新する
+      Object.assign(gantt.options, {
         ...options,
         select_day: props.selectDay,
       });
+
+      // NOTE ganttを再生成する関数
+      gantt.refresh(tasks);
     }
   }, [props.tasks, gantt, props.options, props.selectDay]);
 
