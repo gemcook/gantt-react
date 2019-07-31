@@ -53,6 +53,29 @@ const ReactGantt: React.FC<GanttProps> = props => {
     }
   }, [props.tasks, props.options, gantt, props.selectDay]);
 
+  // TODO hooksファイルを作成し、社内の最新の構成に合わせる
+  useEffect(() => {
+    if (gantt) {
+      // ganttに渡すオプションの関数を更新する
+      Object.assign(gantt.options, {
+        on_click: props.onGanttBarClick,
+        on_date_change: props.onDateChange,
+        on_progress_change: props.onProgressChange,
+        on_view_change: props.onViewChange,
+        on_contextmenu: props.onContextMenu,
+        on_gantt_contextmenu: props.onGanttContextMenu,
+      });
+    }
+  }, [
+    gantt,
+    props.onContextMenu,
+    props.onDateChange,
+    props.onGanttBarClick,
+    props.onGanttContextMenu,
+    props.onProgressChange,
+    props.onViewChange,
+  ]);
+
   return (
     <div className="gc__frappe-gantt-react">
       <svg
