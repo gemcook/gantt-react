@@ -57,9 +57,6 @@ const GanttDemo: React.FC = () => {
   ];
 
   const options = {
-    onDateChange: (task: any) => {
-      console.log(task);
-    },
     headerHeight: 50,
     barHeight: 30,
     viewMode: 'Day',

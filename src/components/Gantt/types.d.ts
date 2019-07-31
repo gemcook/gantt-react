@@ -1,11 +1,17 @@
 export type GanttProps = {
   tasks: Array<Array<Task>>;
   selectDay?: string;
+  onGanttBarClick?: (task: Task) => void;
+  onDateChange?: (task: Task, start: Date, end: Date) => void;
+  onProgressChange?: (task: Task, progress: number) => void;
+  onViewChange?: (viewMode: string) => void;
+  onContextMenu?: (e: MouseEvent, task: Task) => void;
+  onGanttContextMenu?: (
+    e: MouseEvent,
+    new_task: Task,
+    tasks: Array<Task>
+  ) => void;
   options?: {
-    onClick?: (task: Task) => any;
-    onDateChange?: (task: Task, start: Date, end: Date) => any;
-    onProgressChange?: (task: Task, progress: number) => any;
-    onViewChange?: (viewMode: string) => any;
     headerHeight?: number;
     coumnWidth?: number;
     step?: number;
