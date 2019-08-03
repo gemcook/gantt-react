@@ -1,6 +1,6 @@
 {
   "name": "@gemcook/gantt-react",
-  "version": "0.1.7-test",
+  "version": "0.1.8-test",
   "author": "Gemcook Engineers <engineers@gemcook.com>",
   "license": "MIT",
   "main": "./lib/index.js",
