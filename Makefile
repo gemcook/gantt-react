@@ -1,3 +1,5 @@
+SOURCE_DIR=./.build-cache/components/index.ts
+
 # Webサーバ起動
 .PHONY: start
 start:
@@ -67,12 +69,7 @@ build:
 	rm -rf ./.build-cache \
 	&& cp -r ./src ./.build-cache \
 	&& yarn run rollup -c \
-	&& yarn run tsc --moduleResolution node --module esnext --jsx preserve --esModuleInterop --allowSyntheticDefaultImports --declaration --emitDeclarationOnly --declarationDir ./lib ./.build-cache/components/index.ts
-
-# ライブラリの型定義を生成する
-.PHONY: gen-types
-gen-types:
-	yarn run tsc --outFile ./lib/@types/index.d.ts ./src/**/*.d.ts
+	&& yarn run tsc --moduleResolution node --module esnext --jsx preserve --esModuleInterop --allowSyntheticDefaultImports --declaration --emitDeclarationOnly --declarationDir ./lib $(SOURCE_DIR)
 
 # ライブラリの publish をする
 .PHONY: publish

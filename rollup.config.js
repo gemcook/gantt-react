@@ -31,7 +31,6 @@ export default [
         name: 'create chace',
         buildStart: async () => {
           const exists = await fs.pathExists(buildCachePath);
-
           if (exists) {
             await _renameFilePaths(buildCachePath);
           }
@@ -100,7 +99,7 @@ export default [
   },
 ];
 
-const _renameFilePaths = async (file, currentPath) => {
+const _renameFilePaths = async (filePath, currentPath) => {
   let currentFullPath = '';
   if (currentPath) {
     currentFullPath = currentPath;
@@ -108,12 +107,12 @@ const _renameFilePaths = async (file, currentPath) => {
     currentFullPath = buildCachePath;
   }
 
-  const isDir = await _isDirPath(file);
+  const isDir = await _isDirPath(filePath);
   if (isDir) {
-    const filePaths = await fs.readdir(file);
+    const filePaths = await fs.readdir(filePath);
 
-    for (const filePath of filePaths) {
-      const currentFullFilePath = path.join(currentFullPath, filePath);
+    for (const nestedFilePath of filePaths) {
+      const currentFullFilePath = path.join(currentFullPath, nestedFilePath);
 
       const isDir = await _isDirPath(currentFullFilePath);
       if (isDir) {
@@ -123,25 +122,25 @@ const _renameFilePaths = async (file, currentPath) => {
       }
     }
   } else {
-    const fullFilePath = path.join(currentFullPath, file);
+    const fullFilePath = path.join(currentFullPath, filePath);
     await _renameFile(fullFilePath);
   }
 };
 
-const _isDirPath = async file => {
-  const isExists = await fs.pathExists(file);
+const _isDirPath = async fullFilePath => {
+  const isExists = await fs.pathExists(fullFilePath);
   if (isExists) {
-    const stat = await fs.stat(file);
+    const stat = await fs.stat(fullFilePath);
     return stat.isDirectory();
   } else {
     return false;
   }
 };
 
-const _renameFile = async file => {
-  const isExists = await fs.pathExists(file);
+const _renameFile = async fullFilePath => {
+  const isExists = await fs.pathExists(fullFilePath);
   if (isExists) {
-    const newFilePath = file.replace(/\.d/g, '');
-    fs.rename(file, newFilePath);
+    const newFilePath = fullFilePath.replace(/\.d/g, '');
+    fs.rename(fullFilePath, newFilePath);
   }
 };
