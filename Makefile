@@ -64,7 +64,15 @@ gen-test:
 # ライブラリのためのビルドをする
 .PHONY: build
 build:
-	yarn run rollup -c
+	rm -rf ./.build-cache \
+	&& cp -r ./src ./.build-cache \
+	&& yarn run rollup -c \
+	&& yarn run tsc --moduleResolution node --module esnext --jsx preserve --esModuleInterop --allowSyntheticDefaultImports --declaration --emitDeclarationOnly --declarationDir ./lib ./.build-cache/components/index.ts
+
+# ライブラリの型定義を生成する
+.PHONY: gen-types
+gen-types:
+	yarn run tsc --outFile ./lib/@types/index.d.ts ./src/**/*.d.ts
 
 # ライブラリの publish をする
 .PHONY: publish
