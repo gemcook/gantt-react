@@ -3,7 +3,8 @@
   "version": "0.1.6-test",
   "author": "Gemcook Engineers <engineers@gemcook.com>",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "files": [
     "lib",
     "README.md",
