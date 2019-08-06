@@ -40,17 +40,28 @@ const ReactGantt: React.FC<GanttProps> = props => {
     const options = collection.toSnakeKeys(props.options);
     const tasks = collection.toSnakeKeys(props.tasks);
 
-    // もしガントが表示済みなら更新する
-    if (gantt) {
-      // ガントのオプションを更新する
-      Object.assign(gantt.options, {
-        ...options,
-        select_day: props.selectDay,
-      });
-
-      // NOTE ganttを再生成する関数
-      gantt.refresh(tasks);
+    if (!gantt) {
+      return;
     }
+
+    // ガントの選択された日付と、配列の長さが変わっていなければ更新
+    if (
+      gantt.tasks.length === tasks.length &&
+      gantt.options.select_day === props.selectDay
+    ) {
+      // gemcook/ganttの関数
+      gantt.refresh_tasks(tasks);
+      return;
+    }
+
+    // ガントのオプションを更新する
+    Object.assign(gantt.options, {
+      ...options,
+      select_day: props.selectDay,
+    });
+
+    // NOTE ganttを再生成する関数
+    gantt.refresh(tasks);
   }, [props.tasks, props.options, gantt, props.selectDay]);
 
   // TODO hooksファイルを作成し、社内の最新の構成に合わせる
