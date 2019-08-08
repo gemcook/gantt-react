@@ -44,7 +44,7 @@ const ReactGantt: React.FC<GanttProps> = props => {
       return;
     }
 
-    // ガントの選択された日付と、配列の長さが変わっていなければ更新
+    // ガントの選択された日付と、配列の長さが変わっていなければガントバーのみを更新
     if (
       gantt.tasks.length === tasks.length &&
       gantt.options.select_day === props.selectDay
