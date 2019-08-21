@@ -1202,10 +1202,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-9.0.1.tgz#c27b391d8457d1e893f1eddeaf5e5412d12ffbb5"
   integrity sha512-6It2EVfGskxZCQhuykrfnALg7oVeiI6KclWSmGDqB0AiInVrTGB9Jp9i4/Ad21u9Jde/voVQz6eFX/eSg/UsPA==
 
-"@gemcook/gantt@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@gemcook/gantt/-/gantt-0.1.9.tgz#2d57af3dce629e820ef406af640dbcc4c1f490d4"
-  integrity sha512-IVX1Z7aZnF8oYFmClTCr4Nep8ATOML1EoYCa1Jl9uLU+DUs8iFIK/A8QjHitT5JedAyudspciV9pRUwfBR4ewg==
+"@gemcook/gantt@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@gemcook/gantt/-/gantt-0.2.0.tgz#048d986b8b5268c24d803ebeb1e7ad9287f7c8c6"
+  integrity sha512-mP4hT8hQqqVm4aPBZ1c/ylNB2xxkoPnQ146nsHma2i8PmbgYxY2ki+WhvDsiMYztwKFzPoL6XUqlr566XK2frQ==
 
 "@gemcook/utils@^5.2.0":
   version "5.2.0"
