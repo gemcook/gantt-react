@@ -8,7 +8,8 @@ const cpx = require('cpx');
 
 // Rollup common settings
 const external = ['react', 'react-dom'];
-const input = 'src/components/index.ts';
+const targetDir = './src/components';
+const input = targetDir + '/index.ts';
 
 // Rollup config for build
 const buildConfig = {
@@ -88,7 +89,6 @@ const buildConfig = {
 };
 
 // Rollup config for type definitions
-const targetDir = './src/components';
 const tsdConfig = {
   external,
   input,
