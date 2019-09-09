@@ -1,3 +1,4 @@
+const fs = require('fs-extra');
 const resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
 const babel = require('rollup-plugin-babel');
@@ -53,6 +54,18 @@ export default [
         extensions: ['.css', '.scss'],
         extract: 'lib/styles/index.css',
       }),
+      {
+        name: 'sync scss',
+        buildEnd: err => {
+          if (err) {
+            throw err;
+          }
+
+          fs.copySync('./src/styles', './lib/styles', {
+            dereference: true,
+          });
+        },
+      },
     ],
     output: {
       file: 'lib/index.js',
