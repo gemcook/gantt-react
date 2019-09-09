@@ -37,7 +37,17 @@ export type GanttProps = {
   };
 };
 
-type Task = {
+// gemcook/ganttのガント全体の型
+export type GanttContainer = {
+  options: {
+    select_day: string;
+  };
+  tasks: Array<Task>;
+  refresh: (Tasks: Array<Task>) => void;
+  refresh_tasks: (Tasks: Array<Task>) => void;
+};
+
+export type Task = {
   id: string;
   name: string;
   start: string;
